@@ -1,0 +1,688 @@
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO WEBSITE XII-TITL</title>
+    <link href="c:\Users\pc35\Pictures\LOGO SMK.jpg" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #000000;
+        }
+        h1 {
+            text-align: center;
+            color: #080808;
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: rgb(197, 158, 28);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(192, 166, 18, 0.979);
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button {
+            flex: 1;
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #e2c02aea;
+            color: rgb(17, 17, 16);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #360ec7c2;
+            transform: translateY(-2px);
+        }
+        .card-container {
+            display: none; /* Awalnya disembunyikan */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background: #ffc60bc4;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgb(160, 150, 11);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(30% - 20px); /* Ukuran kartu */
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #4e431c;
+        }
+        th {
+            background-color: #7c6810ee;
+            color: rgb(0, 0, 0);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function toggleCards(cardType) {
+            const cardContainers = ['siswaCards', 'guruCards', 'piketCards', 'strukturCards', 'gallery', 'jadwalPelajaran', 'kegiatanKelas'];
+
+            // Sembunyikan semua kartu
+            cardContainers.forEach(id => {
+                const container = document.getElementById(id);
+                if (container) {
+                    container.style.display = id === cardType ? "flex" : "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>WELCOME TO CLAS XI-TITL</h1>
+
+        <div class="button-container">
+            <button onclick="toggleCards('siswaCards')">Data Siswa</button>
+            <button onclick="toggleCards('guruCards')">Data Guru</button>
+            <button onclick="toggleCards('piketCards')">Piket Kelas</button>
+            <button onclick="toggleCards('strukturCards')">Struktur Kelas</button>
+            <button onclick="toggleCards('gallery')">Galeri Foto</button>
+            <button onclick="toggleCards('jadwalPelajaran')">Jadwal Pelajaran</button>
+            <button onclick="toggleCards('kegiatanKelas')">Kegiatan Kelas</button>
+        </div>
+
+        <div id="siswaCards" class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Abdullah Ali Havid">
+                <h3>A. HENDY YOGA PRATAMA</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 3060192266</p>
+                <p>Tempat Lahir: Tuban</p>
+                <p>Tanggal Lahir: 2006-03-12</p>
+                <p>Alamat: Dusun Binangun</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Achmad Rafellino Dwi Kurniawan">
+                <h3>ABDUL RIZKY ALHADI</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0069193134</p>
+                <p>Tempat Lahir: SIDOARJO</p>
+                <p>Tanggal Lahir: 2006-06-29</p>
+                <p>Alamat: Jl RAYA BEJI</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Adtya Pratama Putra Wahyudianto">
+                <h3>ADE IRZA TRIUTOMO</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0063329373</p>
+                <p>Tempat Lahir: Tuban</p>
+                <p>Tanggal Lahir: 2006-11-19</p>
+                <p>Alamat: PURWOREJO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Afdhal Ulum">
+                <h3>AHMAD ZUHDAN HABIBI</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0073585091</p>
+                <p>Tempat Lahir: Tuban</p>
+                <p>Tanggal Lahir: 2007-09-06</p>
+                <p>Alamat: Ds KARANGASEM</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Arif Muzaki">
+                <h3>ALYA SOFIA RAHMA</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: P</p>
+                <p>NISN: 0056779171</p>
+                <p>Tempat Lahir: Tuban</p>
+                <p>Tanggal Lahir: 2005-04-17</p>
+                <p>Alamat: Dsn TAWANG REJO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Fadli Nur Ibad">
+                <h3>ANWARUS SHOLIHIN</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0062611494</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-07-26</p>
+                <p>Alamat: SUKOHARJO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Risky Putra Indrawan">
+                <h3>ARIP RAHMAN SANTOSO</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0073861930</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2007-04-06</p>
+                <p>Alamat: DS SUMURGENENG</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ahmad Zaenal Prayogi">
+                <h3>ARSA ADIRANGGA FEBRIANTO</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0071289641</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2007-02-01</p>
+                <p>Alamat: DS CINGKLUNG</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\bak rudin.jpg" alt="Foto BAKRUDDIN">
+                <h3>BAKRUDDIN</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0063966032</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-05-29</p>
+                <p>Alamat: DSN BINANGUN</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Aldi Rahmaka">
+                <h3>DENI ERLANGGA</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0079108342</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2007-05-17</p>
+                <p>Alamat: DS CINGKLUNG
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Aldi Rizki Utomo">
+                <h3>DEWI RAHMASARI</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: P</p>
+                <p>NISN: 0076745210</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2007-26</p>
+                <p>Alamat: KANOMAN</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\eksel.jpg" alt="Foto eksel">
+                <h3>EKSEL GEBY SAPUTRA</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0064319539</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2007-02-06</p>
+                <p>Alamat: DSN DAMPUNG</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Andik Saputro">
+                <h3>FADHUL HUDA</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0069070883</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-09-11</p>
+                <p>Alamat: DS PURWOREJO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Andika Adi Pratama">
+                <h3>HAENIK MAULIDDAH</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: P</p>
+                <p>NISN: 00721005284</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2007-04-09</p>
+                <p>Alamat: DS PURWOREJO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Andika Ardi Anto">
+                <h3>HALDIS APTANA LATIEF</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0072103200</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2007-04-01</p>
+                <p>Alamat: DS BELIKANGET</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Ardian Dwi Nugroho">
+                <h3>IFAN ARDHIANSYAH</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0054788497</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2005-08-29</p>
+                <p>Alamat: DS DIKIR</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Azzam Maulana">
+                <h3>IMRON ROSYADI</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0078944432</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 200-03-06</p>
+                <p>Alamat: DSN BANCAR</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Bagus Candra">
+                <h3>KHOBITUR ROHMAN</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 00679220027</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-09-13</p>
+                <p>Alamat: SOCOREJO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Bayu Aditya">
+                <h3>M. KHOLILUR ROHMAN</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0061641567</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-06-25</p>
+                <p>Alamat: DSN BINANGUN</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Bima Dwi Putra">
+                <h3>M. ZACKY FIRANSYAH</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0074470938</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2007-04-08</p>
+                <p>Alamat: PURWOREJO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Dela Dwi Sari">
+                <h3>M. ROYYAN FADLI</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 3044091606</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2004-03-04</p>
+                <p>Alamat: DS MERKAWANG</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Dimas Rian">
+                <h3>MUHAMMAD ABRISAM HAFISZ</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0067264841</p>
+                <p>Tempat Lahir: TUBAN/p>
+                <p>Tanggal Lahir: 2006-11-10</p>
+                <p>Alamat: PURWOREJO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Eko Prasetyo">
+                <h3>MUHAMMAD AGUS HIDAYAT</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0063909769</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-08-24</p>
+                <p>Alamat: JL JENU</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Eko Rahman">
+                <h3>MUHAMAD GATHUT ROZIKIN</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0059926705</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2005-12-15</p>
+                <p>Alamat: DS KEREK</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Evan Reza">
+                <h3>MUHAMMAD ZAINUL AZZAN</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0067007455</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-10-17</p>
+                <p>Alamat: SOBONTORO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Fandi">
+                <h3>NADIRA IZZAT MIKA</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0067652995</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-06-17</p>
+                <p>Alamat: DS HARGORETNO</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Farhan">
+                <h3>NUR VETGA BERLY IRZQ</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0053874103</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2005-03-18</p>
+                <p>Alamat: JL RAYA CULI</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Fathur">
+                <h3>RENO RAMADHAN</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0063868996</p>
+                <p>Tempat Lahir: SERANG</p>
+                <p>Tanggal Lahir: 2006-11-09</p>
+                <p>Alamat: NGULAHAN</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Geri">
+                <h3>RYAN AHSANUL ILMI</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0065230300</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-10-25</p>
+                <p>Alamat: DS SUMURGENENG</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Geri">
+                 <h3>SUGIANTO</h3>
+                 <p>Kelas: 12 TITL</p>
+                 <p>Jenis: L</p>
+                 <p>NISN: 0059660699</p>
+                 <p>Tempat Lahir: TUBAN</p>
+                 <p>Tanggal Lahir: 2005-06-24</p>
+                 <p>Alamat: DS REMEN</p>
+             </div>
+             <div class="card">
+                 <img src="https://via.placeholder.com/100" alt="Foto Geri">
+                 <h3>VANDU PRASTIYO BUDI</h3>
+                 <p>Kelas: 12 TITL</p>
+                 <p>Jenis: L</p>
+                 <p>NISN: 0066290085</p>
+                 <p>Tempat Lahir: TUBAN</p>
+                 <p>Tanggal Lahir: 2006-02-23</p>
+                 <p>Alamat: DSN KENANTI</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\vani.jpg" alt="Foto Geri">
+                <h3>VANIA NURAENI</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: P</p>
+                <p>NISN: 0077417065</p>
+                <p>Tempat Lahir: WAENETAT</p>
+                <p>Tanggal Lahir: 2007-01-08</p>
+                <p>Alamat: COKROWATI</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Geri">
+                <h3>ZAENAL ABIDIN</h3>
+                <p>Kelas: 12 TITL</p>
+                <p>Jenis: L</p>
+                <p>NISN: 0066977368</p>
+                <p>Tempat Lahir: TUBAN</p>
+                <p>Tanggal Lahir: 2006-05-08</p>
+                <p>Alamat: DSN BINANGUN</p>
+            </div>
+          </div>
+
+        <div id="guruCards" class="card-container">
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\pak dwi.jpg" alt="Foto Ahmad Zainuri">
+                <h3>Pak dwi ari wahyudi</h3>
+                <p>Jabatan: Guru Konsentrasi keahlian TITL</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\pak anthoni.jpg" alt="Foto Ainun Nisa">
+                <h3>Pak Moh.athoillah</h3>
+                <p>Jabatan: Guru Produktif pilihan TITL</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>Bu ETTY SETIAWATI</h3>
+                <p>Jabatan: Guru PPKN</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\bu tata.jpeg" alt="Foto Nuranisah">
+                <h3>BU ARIESTA IKA SHOFIANA</h3>
+                <p>Jabatan: Guru MATEMATIKA</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\bu elyana.jpeg" alt="Foto Nuranisah">
+                <h3>BU ELYANA CYNTIA DEWI</h3>
+                <p>Jabatan: Guru B.INDONESIA</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\bu rida.jpeg" alt="Foto Nuranisah">
+                <h3>BU RIDHA NOVITA SARI</h3>
+                <p>Jabatan: Guru B.JAWA</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\bu novita.jpeg" alt="Foto Nuranisah">
+                <h3>Bu NOVITA NUR INAYAH</h3>
+                <p>Jabatan: Guru Bahasa Inggris</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Foto Nuranisah">
+                <h3>Pak RASMU</h3>
+                <p>Jabatan: PAI</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\pc35\Pictures\bu fada.jpeg" alt="Foto Nuranisah">
+                <h3>BU FARIDLATUS SYA'ADAH</h3>
+                <p>Jabatan: B.INGGRIS</p>
+            </div>
+        </div>
+
+        <div id="piketCards" class="card-container">
+            <div class="card">
+                <h3>Senin</h3>
+                <p> A. HENDY YOGA PRATAMA</p>
+                <p> ABDUL RIZKI ALHADI</p>
+                <p> ADE IRZA TRIUTOMO</p>
+                <p> AHMAD ZUHDAN HABIBI</p>
+                <p> ANWARUS SHOLIHIN</p>
+                <p> ARIP RAHMAN SANTOSO</p>
+                <p> ARSA ADIRANGGA FEBRIANTO</p>
+            </div>
+            <div class="card">
+                <h3>Selasa</h3>
+                <p> BAKRUDDIN</p>
+                <p> DENI ERLANGGA</p>
+                <p> EKSEL GEBY SAPUTRA</p>
+                <p> FADHUL HUDA</p>
+                <p> HALDIS APTANA LATIEF</p>
+                <p> IFAN ARDIANSYAH</p>
+                <p> IMRON ROSYADI</p>
+            </div>
+            <div class="card">
+                <h3>Rabu</h3>
+                <p> ALYA SOFIA RAHMA</p>
+                <p> DEWI RAHMASARI</p>
+                <p> HAENIK MAUKIDDAH</p>
+                <p> VANIA NURAENI</p>
+            </div>
+            <div class="card">
+                <h3>Kamis</h3>
+                <p> KHOBITUR ROHMAN</p>
+                <p> M. KHOLILUR ROHMAN</p>
+                <p> M. ZACKY FIRANSYAH</p>
+                <p> M. ROYYAN FADLI</p>
+                <p> MUHAMMAD ABRISAM HAFISZ</p>
+                <p> MUHAMMAD AGUS HIDAYAT</p>
+                <p> MUHAMAD GATHUT ROZIKIN</p>
+           </div>
+           <div class="card">
+                <h3>Jumat</h3>
+                <p> MUHAMMAD ZAINUL AZZAN</p>
+                <p> NADIRA IZAT MIKA</p>
+                <p> NUR VETGA BERLY IRZQ</p>
+                <p> RENO RAMADHAN</p>
+                <p> RYAN AHSANUL ILMI</p>
+                <p> SUGIANTO</p>
+                <p> VANDU PRASTIYO BUDI</p>
+                <p> ZAENAL ABIDIN</p>
+           </div>
+        </div>
+
+        <div id="strukturCards" class="card-container">
+            <div class="card">
+                <h3>Ketua Kelas</h3>
+                <p>Nama:DENI ERLANGGA</p>
+                <h3>Wakil</h3>
+                <p>Nama:ADE IRZA TRIUTOMO</p>
+            </div>
+                <div class="card">
+                <h3>Sekertaris</h3>
+                <p>Nama:HAENIK MAUMAUULIDAHH</p>
+                <h3>Wakil</h3>
+                <p>Nama: ALYA SOFIA RAHMA</p>
+            </div>
+                <div class="card">
+                <h3>Kepala Sekolah</h3>
+                <p>Nama:AGUS SISWANTO S.PD.MP.D</p>
+                <h3>Kepala jurusan</h3>
+                <p>Nama:Happy Latifur Rizal Perdananda S.PD.Gr.</p>
+            </div>
+         </div>
+
+        <div id="gallery" class="gallery">
+            <img src="c:\Users\pc35\Pictures\bengkel.jpg" alt="Foto Kegiatan 1">
+            <img src="c:\Users\pc35\Pictures\Y.jpg" alt="Foto Kegiatan 2">
+            <img src="c:\Users\pc35\Pictures\titl.jpg" alt="Foto Kegiatan 3">
+            <img src="c:\Users\pc35\Pictures\JHJGJ.jpg" alt="Foto Kegiatan 1">
+            <img src="c:\Users\pc35\Pictures\UJUYHHHY.jpg" alt="Foto Kegiatan 2">
+            <img src="c:\Users\pc35\Pictures\bengkell.jpg" alt="Foto Kegiatan 3">
+
+        </div>
+
+        <div id="jadwalPelajaran" class="card-container">
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>Pelajaran</th>
+                    <th>Waktu</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Konsentrasi keahlian titl</td>
+                    <td>07:00 - 15:10</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>konsentrasi keahlian titl</td>
+                    <td>07:00 - 15:10</td>
+                </tr>
+                <tr>
+                    <td>Selasa</td>
+                    <td>Konsentrasi keahlian titl</td>
+                    <td>08:00 - 09:30</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>produktif pilihan titl</td>
+                    <td>07:00 - 15:10</td>
+                <tr>
+                    <td>Rabu</th>
+                    <td>b.inggris</th>
+                    <td>07:00 -15:10</th>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Konsentrasi keahlian titl</td>
+                    <td>07:00 - 15:10</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>projek kreatif dan kewirausahaan</td>
+                    <td>07:00 - 15:10</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>ppkn</td>
+                    <td>08:00 - 09:30</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>matematika</td>
+                    <td>07:00 - 15:10</td>
+                </tr>
+                 <tr>
+                    <td>Kamis</td>
+                    <td>b.indonesia</td>
+                    <td>07:00 - 15:10</td>
+               </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>projek kreatif kewirausahaan</td>
+                    <td>08:00 - 09:30</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>b.jawa</td>
+                    <td>07:00 - 15:10</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>bk</td>
+                    <td>07:00 - 15:10</td>
+                </tr>
+                <tr>
+                    <td>Jumat</td>
+                    <td>pai</td>
+                    <td>07:00 - 15:10</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="kegiatanKelas" class="card-container">
+            <h3>Kegiatan Kelas</h3>
+            <p>Pada tanggal 29 Agustus 2024, kelas XII-TITL Mengikuti tadarus yang diadakan oleh sekolah setiap jadwal</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
